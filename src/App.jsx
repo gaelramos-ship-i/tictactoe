@@ -61,6 +61,8 @@ export default function App() {
   }
 
   function randomResponse(board) {
+    if (!board.includes(null)) return null
+    
     let i = Math.floor(Math.random() * 9)
     while (board[i] !== null) {
       i = Math.floor(Math.random() * 9)
